@@ -1,0 +1,241 @@
+@import '../../styles/variables.scss';
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  background-color: $color-bg-page;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: $spacing-md $page-padding;
+  background-color: $color-bg-card;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.backButton {
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: $spacing-sm;
+  margin-left: -$spacing-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  margin: 0;
+  color: $color-text-primary;
+}
+
+.productImage {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.content {
+  padding: $spacing-lg $page-padding;
+}
+
+.productInfo {
+  background-color: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+}
+
+.productName {
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  color: $color-text-primary;
+  margin: 0 0 $spacing-md 0;
+}
+
+.tags {
+  display: flex;
+  gap: $spacing-sm;
+  flex-wrap: wrap;
+  margin-bottom: $spacing-md;
+}
+
+.tag {
+  padding: 4px 10px;
+  background-color: $color-tag-bg;
+  color: $color-primary;
+  font-size: $font-size-xs;
+  border-radius: $radius-xs;
+}
+
+.description {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-loose;
+  margin: 0 0 $spacing-md 0;
+}
+
+.priceRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: $spacing-md;
+  border-top: 1px solid $color-divider;
+}
+
+.priceInfo {
+  display: flex;
+  align-items: baseline;
+  gap: $spacing-sm;
+}
+
+.price {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-price;
+}
+
+.originalPrice {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+  text-decoration: line-through;
+}
+
+.sales {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.shopInfo {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  background-color: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+}
+
+.shopLogo {
+  width: 64px;
+  height: 64px;
+  border-radius: $radius-md;
+  object-fit: cover;
+}
+
+.shopDetails {
+  flex: 1;
+}
+
+.shopName {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-sm;
+}
+
+.shopMeta {
+  display: flex;
+  gap: $spacing-md;
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.rating {
+  color: $color-gold;
+  font-weight: $font-weight-medium;
+}
+
+.bottomBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $color-bg-card;
+  padding: $spacing-md $page-padding;
+  padding-bottom: calc($spacing-md + env(safe-area-inset-bottom));
+  box-shadow: $shadow-float;
+  max-width: $max-content-width;
+  margin: 0 auto;
+}
+
+.addButton {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  color: $color-text-white;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.quantityButton {
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: $radius-round;
+  background-color: $color-bg-page;
+  color: $color-primary;
+  font-size: 20px;
+  font-weight: 300;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantityText {
+  min-width: 40px;
+  text-align: center;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.goCartButton {
+  flex: 1;
+  height: 48px;
+  border: none;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  color: $color-text-white;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
+.emptyState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+}

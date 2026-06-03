@@ -1,0 +1,241 @@
+@import '../../styles/variables.scss';
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  background-color: $color-bg-page;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: $spacing-md $page-padding;
+  background-color: $color-bg-card;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.backButton {
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: $spacing-sm;
+  margin-left: -$spacing-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  margin: 0;
+  color: $color-text-primary;
+}
+
+.content {
+  padding: $spacing-md $page-padding;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 0;
+  gap: $spacing-md;
+}
+
+.emptyIcon {
+  font-size: 64px;
+}
+
+.emptyText {
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+  margin: 0;
+}
+
+.addressList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.addressCard {
+  background-color: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  cursor: pointer;
+}
+
+.addressInfo {
+  flex: 1;
+  margin-bottom: $spacing-md;
+}
+
+.addressHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  margin-bottom: $spacing-sm;
+}
+
+.userName {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.phone {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.defaultTag {
+  padding: 2px 8px;
+  background-color: $color-tag-bg;
+  color: $color-primary;
+  font-size: $font-size-xs;
+  border-radius: $radius-xs;
+}
+
+.addressDetail {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-normal;
+}
+
+.actions {
+  display: flex;
+  gap: $spacing-md;
+  justify-content: flex-end;
+  border-top: 1px solid $color-divider;
+  padding-top: $spacing-md;
+}
+
+.actionButton {
+  border: none;
+  background: none;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  cursor: pointer;
+  padding: $spacing-xs $spacing-sm;
+}
+
+.form {
+  padding: $spacing-md $page-padding;
+}
+
+.formItem {
+  margin-bottom: $spacing-lg;
+}
+
+.label {
+  display: block;
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  margin-bottom: $spacing-sm;
+}
+
+.input {
+  width: 100%;
+  padding: $spacing-md;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  font-size: $font-size-sm;
+  outline: none;
+  background-color: $color-bg-card;
+  color: $color-text-primary;
+
+  &:focus {
+    border-color: $color-primary;
+  }
+}
+
+.regionRow {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.regionRow .input {
+  flex: 1;
+}
+
+.switchRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: $spacing-md 0;
+}
+
+.switchLabel {
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+}
+
+.switch {
+  width: 50px;
+  height: 30px;
+  background-color: $color-border;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &.active {
+    background-color: $color-primary;
+  }
+}
+
+.switchDot {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  transition: all $transition-base;
+
+  .active & {
+    left: 23px;
+  }
+}
+
+.bottomBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $color-bg-card;
+  padding: $spacing-md $page-padding;
+  padding-bottom: calc($spacing-md + env(safe-area-inset-bottom));
+  box-shadow: $shadow-float;
+  max-width: $max-content-width;
+  margin: 0 auto;
+}
+
+.addButton,
+.submitButton {
+  width: 100%;
+  height: 48px;
+  border: none;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  color: $color-text-white;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}

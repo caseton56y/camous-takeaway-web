@@ -1,0 +1,141 @@
+@import '../../styles/variables.scss';
+
+.container {
+  min-height: 100vh;
+}
+
+.tabs {
+  display: flex;
+  background-color: $color-bg-card;
+  border-bottom: 1px solid $color-divider;
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+.tab {
+  flex: 1;
+  text-align: center;
+  padding: $spacing-md 0;
+  font-size: $font-size-md;
+  color: $color-text-secondary;
+  cursor: pointer;
+  position: relative;
+  transition: all $transition-base;
+
+  &.active {
+    color: $color-primary;
+    font-weight: $font-weight-semibold;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 3px;
+      background-color: $color-primary;
+      border-radius: 2px;
+    }
+  }
+}
+
+.orderList {
+  padding: $spacing-md $page-padding;
+}
+
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 0;
+}
+
+.emptyIcon {
+  font-size: 80px;
+  margin-bottom: $spacing-lg;
+}
+
+.emptyText {
+  font-size: $font-size-md;
+  color: $color-text-tertiary;
+}
+
+.orderCard {
+  background-color: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+  box-shadow: $shadow-card;
+}
+
+.orderHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: $spacing-md;
+  border-bottom: 1px solid $color-divider;
+  margin-bottom: $spacing-md;
+}
+
+.shopName {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.orderStatus {
+  font-size: $font-size-sm;
+  color: $color-primary;
+  font-weight: $font-weight-medium;
+}
+
+.orderItems {
+  display: flex;
+  gap: $spacing-sm;
+  margin-bottom: $spacing-md;
+}
+
+.itemImage {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: $radius-md;
+}
+
+.orderFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: $spacing-md;
+  border-top: 1px solid $color-divider;
+}
+
+.orderPrice {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.priceHighlight {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-bold;
+  color: $color-price;
+}
+
+.actionButton {
+  @include button-reset;
+  padding: 0 $spacing-lg;
+  height: 36px;
+  border-radius: $radius-button;
+  border: 1px solid $color-border;
+  color: $color-text-secondary;
+  font-size: $font-size-sm;
+
+  &.primary {
+    background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+    color: $color-text-white;
+    border: none;
+  }
+}

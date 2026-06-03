@@ -1,0 +1,321 @@
+@import '../../styles/variables.scss';
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  background-color: $color-bg-page;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: $spacing-md $page-padding;
+  background-color: $color-bg-card;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.backButton {
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+  padding: $spacing-sm;
+  margin-left: -$spacing-sm;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  margin: 0;
+  color: $color-text-primary;
+}
+
+.content {
+  padding: $spacing-md $page-padding;
+}
+
+.section {
+  background-color: $color-bg-card;
+  border-radius: $radius-lg;
+  padding: $spacing-lg;
+  margin-bottom: $spacing-md;
+}
+
+.sectionTitle {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+  margin-bottom: $spacing-md;
+}
+
+.addressCard {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  cursor: pointer;
+}
+
+.addressInfo {
+  flex: 1;
+}
+
+.addressHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  margin-bottom: $spacing-sm;
+}
+
+.userName {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.phone {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.addressDetail {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+  line-height: $line-height-normal;
+}
+
+.arrow {
+  font-size: 20px;
+  color: $color-text-tertiary;
+}
+
+.addAddress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $spacing-lg;
+  border: 1px dashed $color-border;
+  border-radius: $radius-md;
+  color: $color-primary;
+  cursor: pointer;
+}
+
+.shopHeader {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  margin-bottom: $spacing-md;
+  padding-bottom: $spacing-md;
+  border-bottom: 1px solid $color-divider;
+}
+
+.shopLogo {
+  width: 48px;
+  height: 48px;
+  border-radius: $radius-md;
+  object-fit: cover;
+}
+
+.shopName {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-text-primary;
+}
+
+.productList {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-md;
+}
+
+.productItem {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.productImage {
+  width: 80px;
+  height: 80px;
+  border-radius: $radius-md;
+  object-fit: cover;
+}
+
+.productInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-xs;
+}
+
+.productName {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-medium;
+  color: $color-text-primary;
+}
+
+.productPrice {
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  color: $color-price;
+}
+
+.productQuantity {
+  font-size: $font-size-sm;
+  color: $color-text-tertiary;
+}
+
+.remarkRow {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+}
+
+.remarkLabel {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.remarkInput {
+  flex: 1;
+  border: none;
+  background: transparent;
+  font-size: $font-size-sm;
+  text-align: right;
+  outline: none;
+  color: $color-text-secondary;
+
+  &::placeholder {
+    color: $color-text-tertiary;
+  }
+}
+
+.paymentMethods {
+  display: flex;
+  flex-direction: column;
+  gap: $spacing-sm;
+}
+
+.paymentMethod {
+  display: flex;
+  align-items: center;
+  gap: $spacing-md;
+  padding: $spacing-md;
+  background-color: $color-bg-page;
+  border-radius: $radius-md;
+  cursor: pointer;
+  position: relative;
+
+  &.active {
+    background-color: $color-tag-bg;
+  }
+}
+
+.paymentIcon {
+  font-size: 28px;
+}
+
+.paymentName {
+  flex: 1;
+  font-size: $font-size-md;
+  color: $color-text-primary;
+}
+
+.radio {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid $color-border;
+  position: relative;
+
+  .active & {
+    border-color: $color-primary;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: $color-primary;
+    }
+  }
+}
+
+.feeRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $spacing-sm 0;
+}
+
+.feeLabel {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.feeValue {
+  font-size: $font-size-sm;
+  color: $color-text-primary;
+}
+
+.bottomBar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $color-bg-card;
+  padding: $spacing-md $page-padding;
+  padding-bottom: calc($spacing-md + env(safe-area-inset-bottom));
+  box-shadow: $shadow-float;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: $max-content-width;
+  margin: 0 auto;
+}
+
+.totalInfo {
+  display: flex;
+  align-items: baseline;
+  gap: $spacing-sm;
+}
+
+.totalLabel {
+  font-size: $font-size-sm;
+  color: $color-text-secondary;
+}
+
+.totalPrice {
+  font-size: $font-size-xxl;
+  font-weight: $font-weight-bold;
+  color: $color-price;
+}
+
+.submitButton {
+  padding: 0 $spacing-xl;
+  height: 48px;
+  border: none;
+  border-radius: $radius-button;
+  background: linear-gradient(135deg, $color-primary 0%, $color-primary-light 100%);
+  color: $color-text-white;
+  font-size: $font-size-md;
+  font-weight: $font-weight-semibold;
+  cursor: pointer;
+  transition: all $transition-base;
+
+  &:active {
+    transform: scale(0.98);
+  }
+}
